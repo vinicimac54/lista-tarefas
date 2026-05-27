@@ -27,10 +27,10 @@ while(parar.toLowerCase() !== "sim" ){
 let opTar = prompt(`Digite "adicionar" para adicionar uma ou mais tarefas, "remover" para remover uma tarefa ou "remover tudo" para remover todas as tarefas`)
 if(opTar.toLowerCase() === "adicionar"){
     adicionarTarefa()
-    console.log(`Tarefas adicionadas ${tarefas}`)
+    console.log(`Tarefas adicionadas, agora esta é a lista: ${tarefas}`)
 } else if(opTar.toLowerCase() === "remover"){
     removerTarefa()
-    console.log(`Tarefas removidas ${tarefas}`)
+    console.log(`Tarefas removidas, agora esta é a lista: ${tarefas}`)
 } else if(opTar.toLowerCase() === "remover tudo"){
     for(let y = tarefas.length - 1;  y >= 0; y--){
     tarefas.splice(y, 1)    
