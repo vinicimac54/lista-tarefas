@@ -1,0 +1,47 @@
+<html>
+<body>
+<script>
+
+let tarefas = []
+let parar = "não"
+function adicionarTarefa() { 
+    let numTar = +prompt("Insira o numero de tarefas que deseja adicionar")
+    let i = 0;
+    while (i < numTar) { 
+    let tarAd = prompt("Insira a tarefa desejada ou parar se desejar sair");
+    if (tarAd.toLowerCase() === "parar"){
+        i = numTar
+    } else{
+       tarefas.push(tarAd) 
+       i++
+    }}      
+}
+
+function removerTarefa() { 
+    let tarRe = prompt("Insira a tarefa que deseja remover")
+    let tarIndex = tarefas.indexOf(tarRe)
+    tarefas.splice(tarIndex, 1)
+}
+
+while(parar.toLowerCase !== "sim" ){
+let opTar = prompt("Você deseja adicionar, remover ou remover todas as tarefas?")
+if(opTar.toLowerCase() === "adicionar"){
+    adicionarTarefa()
+    console.log(`Tarefas adicionadas ${tarefas}`)
+} else if(opTar.toLowerCase() === "remover"){
+    removerTarefa()
+    console.log(`Tarefas removidas ${tarefas}`)
+} else if(opTar.toLowerCase() === "remover tudo"){
+    for(let y = tarefas.length - 1;  y >= 0; y--){
+    tarefas.splice(y, 1)    
+    }
+    console.log(`Todas as tarefas foram removidas`)
+}
+ parar = prompt("Deseja parar?")
+
+
+}
+
+</script>
+</body>
+</html>
