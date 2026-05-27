@@ -24,7 +24,7 @@ function removerTarefa() {
 }
 
 while(parar.toLowerCase !== "sim" ){
-let opTar = prompt("Você deseja adicionar, remover ou remover todas as tarefas?")
+let opTar = prompt(`Digite "adicionar" para adicionar uma ou mais tarefas, "remover" para remover uma tarefa ou "remover tudo" para remover todas as tarefas`)
 if(opTar.toLowerCase() === "adicionar"){
     adicionarTarefa()
     console.log(`Tarefas adicionadas ${tarefas}`)
