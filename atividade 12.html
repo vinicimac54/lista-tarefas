@@ -23,7 +23,7 @@ function removerTarefa() {
     tarefas.splice(tarIndex, 1)
 }
 
-while(parar.toLowerCase !== "sim" ){
+while(parar.toLowerCase() !== "sim" ){
 let opTar = prompt(`Digite "adicionar" para adicionar uma ou mais tarefas, "remover" para remover uma tarefa ou "remover tudo" para remover todas as tarefas`)
 if(opTar.toLowerCase() === "adicionar"){
     adicionarTarefa()
